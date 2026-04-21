@@ -130,7 +130,7 @@
     linear-gradient(155deg, #fff8da, #d9f4ff);
 }
 
-.game-page>*:not(button) {
+.game-page>*:not(button, a) {
   min-width: min(94vw, 640px);
 }
 
@@ -280,8 +280,18 @@
   display: none !important;
 }
 
-.no-display {
-  display: none;
+.link-button {
+  position: fixed;
+  width: fit-content;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(135deg, #5e60ff, #4bc7ff);
+  color: white;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 10px 20px -10px rgba(75, 199, 255, 0.8);
 }
 
 @keyframes pop-in {
