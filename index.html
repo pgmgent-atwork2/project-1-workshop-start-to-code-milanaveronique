@@ -1,13 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>project-1</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Movie</title>
+</head>
+
+<body>
+  <h1>Guess the Movie</h1>
+  <p>Can you guess the movie from its emoji's?</p>
+
+  <h2 id="movie-emoji"></h2>
+
+  <p id="movie-hint"></p>
+
+  <input type="text" id="guess-input" placeholder="Enter your guess..." />
+  <button id="submit-guess">Submit Guess</button>
+  <p id="result"></p>
+
+  <button id="new-game">Next Movie</button>
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
