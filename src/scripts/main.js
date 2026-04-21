@@ -39,7 +39,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
     const correctAnswer = currentMovie.name.trim().toLowerCase();
 
     if (userGuess === correctAnswer) {
-      modalMessage.textContent = 'Congratulations! You guessed the movie!';
+      modalMessage.innerHTML = '<img src="../src/assets/correct.gif" alt="Correct guess"> <p>Congratulations! You guessed the movie!</p>';
       modal.classList.remove('no-display');
       setTimeout(() => {
         modal.classList.add('no-display');
@@ -53,7 +53,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
         movieHint.classList.remove('no-display');
       }
       if (triesLeft === 0) {
-        modalMessage.textContent = `Game over! The correct answer was: ${currentMovie.name}`;
+        modalMessage.innerHTML = `<img src="../src/assets/game-over.gif" alt="Game over"> <p>Game over! The correct answer was: <span class="highlight">${currentMovie.name}</span></p>`;
         modal.classList.remove('no-display');
         resetGame();
         setTimeout(() => {
@@ -61,7 +61,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
         }, 3000);
 
       } else {
-        modalMessage.textContent = 'Wrong guess! Try again.';
+        modalMessage.innerHTML = '<img src="../src/assets/wrong.gif" alt="Wrong guess"> <p>Wrong guess! Try again.</p>';
         modal.classList.remove('no-display');
         setTimeout(() => {
           modal.classList.add('no-display');

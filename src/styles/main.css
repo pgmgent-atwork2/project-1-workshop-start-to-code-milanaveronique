@@ -1,3 +1,5 @@
+@import "./reset.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Fredoka:wght@400;600;700&display=swap');
 
 :root {
@@ -116,7 +118,7 @@
 
 .game-page {
   margin: 0;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 2rem 1rem;
   display: grid;
   place-items: center;
@@ -148,6 +150,8 @@
 }
 
 #movie-emoji {
+  width: 40%;
+  min-width: 7.5rem;
   margin: 1rem auto 0;
   text-align: center;
   font-size: clamp(2.5rem, 10vw, 4.5rem);
@@ -160,8 +164,8 @@
 }
 
 #movie-hint,
-#tries-left,
-#result {
+#tries-left {
+  width: 40%;
   margin-top: 0.75rem;
   border-radius: 14px;
   padding: 0.7rem 0.9rem;
@@ -170,17 +174,18 @@
 }
 
 #movie-hint {
-  color: #8f4f00;
+  color: #267e01;
 }
 
 #tries-left {
   font-weight: 700;
   color: #1f4f8e;
+  text-align: center;
 }
 
 #guess-input {
   margin-top: 1rem;
-  min-width: 50%;
+  min-width: 40%;
   border: 2px solid rgba(94, 96, 255, 0.3);
   border-radius: 14px;
   padding: 0.9rem 1rem;
@@ -248,6 +253,11 @@
   border: 2px solid rgba(255, 255, 255, 0.95);
   padding: 1rem 1.2rem 1.25rem;
   box-shadow: 0 24px 36px -20px rgba(34, 48, 74, 0.8);
+}
+
+.highlight {
+  font-weight: 700;
+  color: #ff5d8f;
 }
 
 .close {
