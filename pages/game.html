@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Movie</title>
+</head>
+
+<body class="game-page">
+    <h1 class="title">Guess the Movie</h1>
+    <p>Can you guess the movie from its emoji's?</p>
+
+    <h2 id="movie-emoji"></h2>
+
+    <p id="movie-hint" class="no-display"></p>
+
+    <input type="text" id="guess-input" placeholder="Enter your guess..." />
+    <button id="submit-guess">Submit Guess</button>
+
+    <p id="tries-left">Tries left: 5</p>
+
+    <button id="new-game">Next Movie</button>
+
+    <modal id="modal" class="no-display">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </modal>
+
+    <script type="module" src="/src/scripts/main.js"></script>
+</body>
+
+</html>
