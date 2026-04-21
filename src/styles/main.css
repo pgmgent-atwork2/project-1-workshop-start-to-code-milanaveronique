@@ -149,7 +149,7 @@
   font-size: 1.1rem;
 }
 
-#movie-emoji {
+.movie-emoji {
   width: 40%;
   min-width: 7.5rem;
   margin: 1rem auto 0;
@@ -163,8 +163,8 @@
   padding: 1rem;
 }
 
-#movie-hint,
-#tries-left {
+.movie-hint,
+.tries-left {
   width: 40%;
   min-width: 7.5rem;
   margin-top: 0.75rem;
@@ -174,17 +174,17 @@
   border: 1px solid rgba(255, 255, 255, 0.95);
 }
 
-#movie-hint {
+.movie-hint {
   color: #267e01;
 }
 
-#tries-left {
+.tries-left {
   font-weight: 700;
   color: #1f4f8e;
   text-align: center;
 }
 
-#guess-input {
+.guess-input {
   margin-top: 1rem;
   min-width: 40%;
   border: 2px solid rgba(94, 96, 255, 0.3);
@@ -195,7 +195,7 @@
   background: rgba(255, 255, 255, 0.95);
 }
 
-#guess-input:focus {
+.guess-input:focus {
   outline: none;
   border-color: #5e60ff;
   box-shadow: 0 0 0 4px rgba(94, 96, 255, 0.15);
@@ -216,12 +216,12 @@
   transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
 }
 
-#submit-guess {
+.submit-guess {
   background: linear-gradient(135deg, #5e60ff, #4bc7ff);
   box-shadow: 0 14px 24px -14px rgba(75, 199, 255, 0.8);
 }
 
-#new-game {
+.new-game {
   background: linear-gradient(135deg, #ff9f1c, #ff5d8f);
   box-shadow: 0 14px 24px -14px rgba(255, 93, 143, 0.8);
 }
@@ -237,7 +237,7 @@
   outline-offset: 2px;
 }
 
-#modal {
+.modal {
   position: fixed;
   inset: 0;
   z-index: 20;
@@ -270,7 +270,7 @@
   cursor: pointer;
 }
 
-#modal-message {
+.modal-message {
   margin-top: 0.25rem;
   font-weight: 600;
   text-align: center;
@@ -331,10 +331,9 @@
     padding-top: 1.2rem;
   }
 
-  #movie-hint,
-  #tries-left,
-  #result,
-  #guess-input,
+  .movie-hint,
+  .tries-left,
+  .guess-input,
   .game-page button {
     font-size: 0.95rem;
   }

@@ -12,21 +12,21 @@
     <h1 class="title">Guess the Movie</h1>
     <p>Can you guess the movie from its emoji's?</p>
 
-    <h2 id="movie-emoji"></h2>
+    <h2 id="movie-emoji" class="movie-emoji"></h2>
 
-    <p id="movie-hint" class="no-display"></p>
+    <p id="movie-hint" class="no-display movie-hint"></p>
 
-    <p id="tries-left">Tries left: 5</p>
+    <p id="tries-left" class="tries-left">Tries left: 5</p>
 
-    <input type="text" id="guess-input" placeholder="Enter your guess..." />
-    <button id="submit-guess">Submit Guess</button>
+    <input type="text" id="guess-input" class="guess-input" placeholder="Enter your guess..." />
+    <button id="submit-guess" class="submit-guess">Submit Guess</button>
 
-    <button id="new-game">Next Movie</button>
+    <button id="new-game" class="new-game">Next Movie</button>
 
-    <modal id="modal" class="no-display">
+    <modal id="modal" class="no-display modal">
         <div class="modal-content">
             <span id="close-modal" class="close">&times;</span>
-            <p id="modal-message"></p>
+            <p id="modal-message" class="modal-message"></p>
         </div>
     </modal>
 

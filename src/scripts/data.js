@@ -1,4 +1,4 @@
-export const emojiList = [
+export const movieList = [
     {
         emoji: "✏️📓👩‍❤️‍👨",
         name: "The Notebook",

@@ -1,5 +1,5 @@
 import '../styles/main.css';
-import { emojiList } from './data';
+import { movieList } from './data';
 
 const maxTries = 5;
 let triesLeft = maxTries;
@@ -15,7 +15,7 @@ function initializeGame() {
   }
   triesLeft = maxTries;
   movieHint.classList.add('no-display');
-  const randomMovie = emojiList[Math.floor(Math.random() * emojiList.length)];
+  const randomMovie = movieList[Math.floor(Math.random() * movieList.length)];
   if (currentMovie && randomMovie.name === currentMovie.name) {
     return initializeGame();
   }
