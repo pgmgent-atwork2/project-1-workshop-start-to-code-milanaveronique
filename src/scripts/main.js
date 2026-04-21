@@ -38,7 +38,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
     const userGuess = guessInput.value.trim().toLowerCase();
     const correctAnswer = currentMovie.name.trim().toLowerCase();
 
-    if (userGuess === correctAnswer) {
+    if (userGuess === correctAnswer || userGuess.includes(correctAnswer)) {
       modalMessage.innerHTML = '<img src="../src/assets/correct.gif" alt="Correct guess"> <p>Congratulations! You guessed the movie!</p>';
       modal.classList.remove('no-display');
       setTimeout(() => {

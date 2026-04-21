@@ -6,7 +6,7 @@ export const emojiList = [
     },
     {
         emoji: "🧙‍♂️⚡️🧹",
-        name: "Harry Potter and the Sorcerer's Stone",
+        name: "Harry Potter",
         hint: "A fantasy film based on the novel by J.K. Rowling."
     },
     {
@@ -66,7 +66,7 @@ export const emojiList = [
     },
     {
         emoji: "👸🏻🍎🧙🏻‍♀️🏡7️⃣",
-        name: "Snow White and the Seven Dwarfs",
+        name: "Snow White",
         hint: "An animated film about a princess who takes refuge with seven dwarfs to escape her evil stepmother."
     },
     {
