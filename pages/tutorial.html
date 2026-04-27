@@ -2,89 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess the Movie</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Movie</title>
 </head>
 
 <body class="tutorial-page">
 
-    <nav>
-        <a href="#intro">Intro</a>
-        <a href="#necessities">Necessities</a>
-        <a href="#html-structure">HTML Structure</a>
-        <a href="#styling">Styling</a>
-        <a href="#javascript">JavaScript</a>
-    </nav>
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#necessities">Necessities</a>
+    <a href="#html-structure">HTML Structure</a>
+    <a href="#styling">Styling</a>
+    <a href="#javascript">JavaScript</a>
+  </nav>
 
-    <h1 class="title" id="intro">How to make this game?</h1>
+  <h1 class="title" id="intro">How to make this game?</h1>
 
-    <p>In this tutorial, we will go through the steps to create the "Guess the Movie" game. We will cover the following
-        topics:</p>
+  <p>In this tutorial, we will go through the steps to create the "Guess the Movie" game. We will cover the following
+    topics:</p>
 
-    <ul>
-        <li>What do you need?</li>
-        <li>Setting up the file structure</li>
-        <li>Creating the HTML structure</li>
-        <li>Styling the game with CSS</li>
-        <li>Adding interactivity with JavaScript</li>
-    </ul>
+  <ul>
+    <li>What do you need?</li>
+    <li>Setting up the file structure</li>
+    <li>Creating the HTML structure</li>
+    <li>Styling the game with CSS</li>
+    <li>Adding interactivity with JavaScript</li>
+  </ul>
 
-    <h2 id="necessities">Step 1. What do you need?</h2>
-    <p>To create this game, you will need the following tools:</p>
-    <ul>
-        <li>A code editor (e.g., Visual Studio Code, Sublime Text, Atom)</li>
-        <li>A web browser (e.g., Google Chrome, Mozilla Firefox, Safari)</li>
-    </ul>
+  <h2 id="necessities">Step 1. What do you need?</h2>
+  <p>To create this game, you will need the following tools:</p>
+  <ul>
+    <li>A code editor (e.g., Visual Studio Code, Sublime Text, Atom)</li>
+    <li>A web browser (e.g., Google Chrome, Mozilla Firefox, Safari)</li>
+  </ul>
 
-    <h3>1.1 Setting up the Development Environment</h3>
-    <p>In our tutorial, we will be using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
-        as our code editor and <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> as our web
-        browser. Follow the links to download and install these tools through the installation guide if you haven't
-        already. Once you have your code
-        editor and web browser set up, you're ready to start building the game!</p>
+  <h3>1.1 Setting up the Development Environment</h3>
+  <p>In our tutorial, we will be using <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+    as our code editor and <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a> as our web
+    browser. Follow the links to download and install these tools through the installation guide if you haven't
+    already. Once you have your code
+    editor and web browser set up, you're ready to start building the game!</p>
 
-    <h3>1.2 Downloading the Starter Template</h3>
-    <p>To make everything easier, we will provide you with a starter template and detailed instructions for each step of
-        the development process. Download <a href="/guess-movie-game.zip" download="guess-movie-game.zip">the starter
-            template</a>.
-    </p>
+  <h3>1.2 Downloading the Starter Template</h3>
+  <p>To make everything easier, we will provide you with a starter template and detailed instructions for each step of
+    the development process. Download <a href="/guess-movie-game.zip" download="guess-movie-game.zip">the starter
+      template</a>.
+  </p>
 
-    <h3>1.3 Exploring the Starter Template</h3>
-    <p>After downloading the starter template, extract the files and open the project in Visual Studio Code. Open Visual
-        Studio Code and select "File" > "Open Folder" to open the extracted folder.</p>
-    <img src="../src/assets/screenshot-1.png" alt="Screenshot of VSCode of how to open a folder in your code editor" />
-    <img src="../src/assets/screenshot-2.png"
-        alt="Screenshot of VSCode of how to open the starter template in your code editor" />
+  <h3>1.3 Exploring the Starter Template</h3>
+  <p>After downloading the starter template, extract the files and open the project in Visual Studio Code. Open Visual
+    Studio Code and select "File" > "Open Folder" to open the extracted folder.</p>
+  <img src="../src/assets/screenshot-1.png" alt="Screenshot of VSCode of how to open a folder in your code editor" />
+  <img src="../src/assets/screenshot-2.png"
+    alt="Screenshot of VSCode of how to open the starter template in your code editor" />
 
-    <p>Take a moment to explore the file structure and familiarize yourself with the different files and folders. The
-        structure should look something like this:</p>
-    <img src="../src/assets/screenshot-3.png" alt="Screenshot of the file structure of the starter template" />
+  <p>Take a moment to explore the file structure and familiarize yourself with the different files and folders. The
+    structure should look something like this:</p>
+  <img src="../src/assets/screenshot-3.png" alt="Screenshot of the file structure of the starter template" />
 
-    <h3>1.4 Installing Dependencies</h3>
-    <p>Before we start coding, we need to install the necessary dependencies for our project. Open the terminal in
-        Visual
-        Studio Code by selecting "Terminal" > "New Terminal". In the terminal, run the following command to install the
-        dependencies:</p>
-    <pre><code>npm install
+  <h3>1.4 Installing Dependencies</h3>
+  <p>Before we start coding, we need to install the necessary dependencies for our project. Open the terminal in
+    Visual
+    Studio Code by selecting "Terminal" > "New Terminal". In the terminal, run the following command to install the
+    dependencies:</p>
+  <pre><code>npm install
 </code></pre>
-    <p>This command will install all the required packages and libraries that we will be using in our project. Once the
-        installation is complete, you are ready to start coding!</p>
+  <p>This command will install all the required packages and libraries that we will be using in our project. Once the
+    installation is complete, you are ready to start coding!</p>
 
-    <h3>1.5 Running the Development Server</h3>
-    <p>To run the development server, go back to the terminal and run the following command:</p>
-    <pre><code>npm run dev
+  <h3>1.5 Running the Development Server</h3>
+  <p>To run the development server, go back to the terminal and run the following command:</p>
+  <pre><code>npm run dev
 </code></pre>
-    <p>This will start the development server and open the game in your default web browser.</p>
+  <p>This will start the development server and open the game in your default web browser.</p>
 
-    <h2 id="html-structure">Step 2. Creating the HTML Structure</h2>
-    <p>Now that we have our development environment set up, we can start creating the HTML structure for our game. Open
-        the
-        <code>index.html</code> file in the <code>src</code> folder and add the following code:
-    </p>
+  <h2 id="html-structure">Step 2. Creating the HTML Structure</h2>
+  <p>Now that we have our development environment set up, we can start creating the HTML structure for our game. Open
+    the
+    <code>index.html</code> file in the <code>src</code> folder and add the following code:
+  </p>
 
-    <pre><code>&lt;!doctype html&gt;
+  <pre><code>&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
 
 &lt;head&gt;
@@ -124,18 +124,18 @@
 &lt;/html&gt;
     </code></pre>
 
-    <p>This code sets up the basic structure of our game, including the title, instructions, input field, buttons, and a
-        modal for displaying messages. We will be adding styles and interactivity to this structure in the next steps.
-    </p>
+  <p>This code sets up the basic structure of our game, including the title, instructions, input field, buttons, and a
+    modal for displaying messages. We will be adding styles and interactivity to this structure in the next steps.
+  </p>
 
-    <h2 id="styling">Step 3. Adding Styles</h2>
+  <h2 id="styling">Step 3. Adding Styles</h2>
 
-    <p>Now that we have our HTML structure in place, we can start adding styles to make our game visually appealing.
-        We already have a <code>reset.css</code> file in our project that resets the default styles of the browser.
-        Now create a new file in the <code>src</code> folder with the name <code>main.css</code> and add the following
-        code:
-    </p>
-    <pre><code>/* main.css */
+  <p>Now that we have our HTML structure in place, we can start adding styles to make our game visually appealing.
+    We already have a <code>reset.css</code> file in our project that resets the default styles of the browser.
+    Now create a new file in the <code>src</code> folder with the name <code>main.css</code> and add the following
+    code:
+  </p>
+  <pre><code>/* main.css */
         @import "./reset.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Fredoka:wght@400;600;700&display=swap');
@@ -377,19 +377,19 @@
   }
 } </code></pre>
 
-    <p>This CSS code defines the styles for our game, including the layout, colors, fonts, and animations. We use CSS
-        variables for easy theming and maintainability.</p>
+  <p>This CSS code defines the styles for our game, including the layout, colors, fonts, and animations. We use CSS
+    variables for easy theming and maintainability.</p>
 
-    <h2 id="javascript">Step 4: Adding Interactivity</h2>
-    <p>In this step, we will add JavaScript to make our game interactive. We will handle user input, check guesses, and
-        update the game state accordingly.</p>
+  <h2 id="javascript">Step 4: Adding Interactivity</h2>
+  <p>In this step, we will add JavaScript to make our game interactive. We will handle user input, check guesses, and
+    update the game state accordingly.</p>
 
-    <h3>4.1: Adding data</h3>
-    <p>First, we need to define the data for our game, such as the movies and their corresponding emojis. We will create
-        an array (a collection) of objects where each object represents a movie with its title, emojis, and a hint.</p>
-    <p>Right-click on the scripts folder and select "New File" to create a new JavaScript file. Name it
-    <pre><code>data.js</code></pre>. Add as many movie objects as you like. Just make sure it looks like this:</p>
-    <pre><code>export const movieList = [
+  <h3>4.1: Adding data</h3>
+  <p>First, we need to define the data for our game, such as the movies and their corresponding emojis. We will create
+    an array (a collection) of objects where each object represents a movie with its title, emojis, and a hint.</p>
+  <p>Right-click on the scripts folder and select "New File" to create a new JavaScript file. Name it
+  <pre><code>data.js</code></pre>. Add as many movie objects as you like. Just make sure it looks like this:</p>
+  <pre><code>export const movieList = [
     {
         emoji: "✏️📓👩‍❤️‍👨",
         name: "The Notebook",
@@ -408,26 +408,26 @@
   // Add more movies here
 ];</code></pre>
 
-    <p>We export this array so it can be imported and used in other JavaScript files.</p>
+  <p>We export this array so it can be imported and used in other JavaScript files.</p>
 
-    <h3>4.2: Implementing the game logic</h3>
+  <h3>4.2: Implementing the game logic</h3>
 
-    <p>Now that we have our data defined, we can implement the game logic in the <code>main.js</code> file. This will
-        include functions to initialize the game, handle user guesses, update the UI, and manage the game state.
-        Right-click on the scripts folder and select "New File" to create a new JavaScript file. Name it
-        <code>main.js</code> and add the following code:
-    </p>
-    <pre><code>import '../styles/main.css';
+  <p>Now that we have our data defined, we can implement the game logic in the <code>main.js</code> file. This will
+    include functions to initialize the game, handle user guesses, update the UI, and manage the game state.
+    Right-click on the scripts folder and select "New File" to create a new JavaScript file. Name it
+    <code>main.js</code> and add the following code:
+  </p>
+  <pre><code>import '../styles/main.css';
 import { movieList } from './data';
 const maxTries = 5;
 let triesLeft = maxTries; </code></pre>
-    <p>This imports our styling and our data from <code>data.js</code>. This initializes the game with a maximum number
-        of tries and sets the current number of tries left.</p>
+  <p>This imports our styling and our data from <code>data.js</code>. This initializes the game with a maximum number
+    of tries and sets the current number of tries left.</p>
 
-    <p>Next, we will implement the functions to initialize the game. Add the following code:
-    </p>
+  <p>Next, we will implement the functions to initialize the game. Add the following code:
+  </p>
 
-    <pre><code>
+  <pre><code>
         const movieEmoji = document.getElementById('movie-emoji');
 const movieHint = document.getElementById('movie-hint');
 
@@ -453,12 +453,12 @@ if (movieEmoji && movieHint) {
 }
     </code></pre>
 
-    <p>This code defines the function to initialize the game. It randomly selects a movie from the list, updates the
-        UI with the movie's emojis and hint, and resets the number of tries left.</p>
+  <p>This code defines the function to initialize the game. It randomly selects a movie from the list, updates the
+    UI with the movie's emojis and hint, and resets the number of tries left.</p>
 
-    <p>Now let's implement the game logic to handle user guesses and update the UI accordingly.</p>
+  <p>Now let's implement the game logic to handle user guesses and update the UI accordingly.</p>
 
-    <pre><code>
+  <pre><code>
         const guessInput = document.getElementById('guess-input');
 const submitButton = document.getElementById('submit-guess');
 const triesLeftDisplay = document.getElementById('tries-left');
@@ -503,11 +503,11 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
 }
     </code></pre>
 
-    <p>This code adds an event listener to the submit button that checks the user's guess against the correct answer. It
-        updates the number of tries left, shows hints, and displays modals for correct and incorrect guesses.</p>
+  <p>This code adds an event listener to the submit button that checks the user's guess against the correct answer. It
+    updates the number of tries left, shows hints, and displays modals for correct and incorrect guesses.</p>
 
-    <p>Now we will add code to reset the game. Add the following code:</p>
-    <pre><code>
+  <p>Now we will add code to reset the game. Add the following code:</p>
+  <pre><code>
             function resetGame() {
   triesLeft = maxTries;
   triesLeftDisplay.textContent = `Tries left: ${triesLeft}`;
@@ -519,30 +519,30 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
 }
         </code></pre>
 
-    <p>We also add a small snippet of code to close the popup. Add the following code:</p>
-    <pre><code>const closeModalButton = document.getElementById('close-modal');
+  <p>We also add a small snippet of code to close the popup. Add the following code:</p>
+  <pre><code>const closeModalButton = document.getElementById('close-modal');
 if (closeModalButton && modal) {
   closeModalButton.addEventListener('click', () => {
     modal.classList.add('no-display');
   });
 }</code></pre>
 
-    <p>Finally, we will implement the function to reset the game when the user clicks the "Next Movie" button. Add the
-        following code: </p>
-    <pre><code>const resetButton = document.getElementById('new-game');
+  <p>Finally, we will implement the function to reset the game when the user clicks the "Next Movie" button. Add the
+    following code: </p>
+  <pre><code>const resetButton = document.getElementById('new-game');
 if (resetButton) {
   resetButton.addEventListener('click', resetGame);
 } </code></pre>
 
-    <p>This code adds an event listener to the "Next Movie" button that calls the resetGame function to start a new
-        game.</p>
+  <p>This code adds an event listener to the "Next Movie" button that calls the resetGame function to start a new
+    game.</p>
 
-    <p>With this, we have completed the implementation of our "Guess the Movie" game! You can now test the game in your
-        browser and enjoy playing it. Feel free to customize the movies, styles, and functionality to make it your own!
-    </p>
+  <p>With this, we have completed the implementation of our "Guess the Movie" game! You can now test the game in your
+    browser and enjoy playing it. Feel free to customize the movies, styles, and functionality to make it your own!
+  </p>
 
 
-    <script type="module" src="/src/scripts/main.js"></script>
+  <script type="module" src="/src/scripts/main.js"></script>
 </body>
 
 </html>
