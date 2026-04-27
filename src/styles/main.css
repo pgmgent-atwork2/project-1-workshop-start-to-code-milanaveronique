@@ -447,27 +447,6 @@ h1.title {
   outline: 3px solid rgba(94, 96, 255, 0.18);
 }
 
-.copy-tooltip {
-  position: absolute;
-  top: -34px;
-  right: 8px;
-  background: rgba(34, 48, 74, 0.9);
-  color: white;
-  padding: 0.35rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 160ms ease, transform 160ms ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.copy-tooltip.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 @media (max-width: 640px) {
   .tutorial-container {
     padding: 1rem;
