@@ -37,6 +37,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
   submitButton.addEventListener('click', () => {
     const userGuess = guessInput.value.trim().toLowerCase();
     const correctAnswer = currentMovie.name.trim().toLowerCase();
+    const closeAnswer = currentMovie.close ? currentMovie.close.trim().toLowerCase() : null;
 
     if (userGuess === correctAnswer || userGuess.includes(correctAnswer)) {
       modalMessage.innerHTML = '<img src="../src/assets/correct.gif" alt="Correct guess"> <p>Congratulations! You guessed the movie!</p>';
@@ -45,7 +46,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
         modal.classList.add('no-display');
       }, 3000);
       resetGame();
-    } else {
+    } else if (userGuess === closeAnswer && userGuess.includes(closeAnswer)) {
       triesLeft--;
       triesLeftDisplay.textContent = `Tries left: ${triesLeft}`;
       guessInput.value = '';
@@ -59,7 +60,28 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
         setTimeout(() => {
           modal.classList.add('no-display');
         }, 3000);
-
+      } else {
+        modalMessage.innerHTML = '<img src="../src/assets/close.gif" alt="Close guess"> <p>Close! You are on the right track. Try again.</p>';
+        modal.classList.remove('no-display');
+        setTimeout(() => {
+          modal.classList.add('no-display');
+        }, 3000);
+      }
+    }
+    else {
+      triesLeft--;
+      triesLeftDisplay.textContent = `Tries left: ${triesLeft}`;
+      guessInput.value = '';
+      if (triesLeft === 3 && movieHint) {
+        movieHint.classList.remove('no-display');
+      }
+      if (triesLeft === 0) {
+        modalMessage.innerHTML = `<img src="../src/assets/game-over.gif" alt="Game over"> <p>Game over! The correct answer was: <span class="highlight">${currentMovie.name}</span></p>`;
+        modal.classList.remove('no-display');
+        resetGame();
+        setTimeout(() => {
+          modal.classList.add('no-display');
+        }, 3000);
       } else {
         modalMessage.innerHTML = '<img src="../src/assets/wrong.gif" alt="Wrong guess"> <p>Wrong guess! Try again.</p>';
         modal.classList.remove('no-display');

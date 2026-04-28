@@ -12,6 +12,7 @@ export const movieList = [
     {
         emoji: "🦁 + 👑",
         name: "The Lion King",
+        close: "Lion King",
         hint: "A animated film about a young lion's journey to adulthood."
     },
     {
@@ -30,7 +31,7 @@ export const movieList = [
         hint: "A romantic fantasy film based on the novel by Stephenie Meyer."
     },
     {
-        emoji: "❄️🛳👩‍❤️‍👨🚪",
+        emoji: "❄️🚢👩‍❤️‍👨🚪",
         name: "Titanic",
         hint: "A romantic drama film about the sinking of a ship."
     },
@@ -47,6 +48,7 @@ export const movieList = [
     {
         emoji: "👑👴 + 💍💍",
         name: "The Lord of the Rings",
+        close: "Lord of the Rings",
         hint: "A fantasy film series based on the novel by J.R.R. Tolkien."
     },
     {
@@ -66,7 +68,8 @@ export const movieList = [
     },
     {
         emoji: "👸🏻🍎🧙🏻‍♀️🏡7️⃣",
-        name: "Snow White",
+        name: "Snow White and the Seven Dwarfs",
+        close: "Snow White",
         hint: "An animated film about a princess who takes refuge with seven dwarfs to escape her evil stepmother."
     },
     {
@@ -77,6 +80,7 @@ export const movieList = [
     {
         emoji: "🦇 🃏",
         name: "The Batman",
+        close: "Batman",
         hint: "A superhero film about a vigilante crime-fighter in Gotham City."
     },
     {
