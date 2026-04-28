@@ -107,10 +107,13 @@
 
     &lt;p id="tries-left" class="tries-left"&gt;Tries left: 5&lt;/p&gt;
 
-    &lt;input type="text" id="guess-input" class="guess-input" placeholder="Enter your guess..." /&gt;
+    &lt;div class="guess-container"&gt;
+        &lt;input type="text" id="guess-input" class="guess-input" placeholder="Enter your guess..." /&gt;
     &lt;button id="submit-guess" class="submit-guess"&gt;Submit Guess&lt;/button&gt;
 
     &lt;button id="new-game" class="new-game"&gt;Next Movie&lt;/button&gt;
+    &lt;/div&gt;
+    
 
     &lt;modal id="modal" class="no-display modal"&gt;
         &lt;div class="modal-content"&gt;
@@ -184,7 +187,6 @@
   margin: 0;
   min-height: 80vh;
   padding: 2rem 1rem;
-  display: grid;
   place-items: center;
   font-family: 'Fredoka', 'Segoe UI', sans-serif;
   color: var(--text);
@@ -204,13 +206,9 @@
 }
 
 .game-page p {
-  margin: 0;
-}
-
-.game-page p:nth-of-type(1) {
-  margin-top: 0.4rem;
+  margin-top: 1rem;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .movie-emoji {
@@ -248,9 +246,18 @@
   text-align: center;
 }
 
+.guess-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
 .guess-input {
   margin-top: 1rem;
-  min-width: 40%;
+  min-width: 100%;
   border: 2px solid rgba(94, 96, 255, 0.3);
   border-radius: 14px;
   padding: 0.9rem 1rem;
@@ -278,6 +285,7 @@
   color: #fff;
   cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  align-self: center;
 }
 
 .submit-guess {
@@ -379,6 +387,27 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 1rem;
+  }
+
+  .home-page a {
+    font-size: 1rem;
+  }
+
+  .game-page {
+    padding-top: 1.2rem;
+  }
+
+  .movie-hint,
+  .tries-left,
+  .guess-input,
+  .game-page button {
+    font-size: 0.95rem;
   }
 } </code></pre>
 
