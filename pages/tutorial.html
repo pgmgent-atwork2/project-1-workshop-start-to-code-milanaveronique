@@ -253,10 +253,10 @@
 .guess-container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+}
+
+form {
+  width: 100%;
 }
 
 .guess-input {
@@ -277,7 +277,7 @@
 }
 
 .game-page button {
-  margin-top: 0.85rem;
+  margin: 0.85rem auto;
   width: 40%;
   min-width: 7.5rem;
   border: 0;
@@ -289,12 +289,12 @@
   color: #fff;
   cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
-  align-self: center;
 }
 
 .submit-guess {
   background: linear-gradient(135deg, #5e60ff, #4bc7ff);
   box-shadow: 0 14px 24px -14px rgba(75, 199, 255, 0.8);
+  display: block;
 }
 
 .new-game {
