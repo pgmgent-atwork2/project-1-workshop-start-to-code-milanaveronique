@@ -511,6 +511,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
   submitButton.addEventListener('click', () => {
     const userGuess = guessInput.value.trim().toLowerCase();
     const correctAnswer = currentMovie.name.trim().toLowerCase();
+    const closeAnswer = currentMovie.close ? currentMovie.close.trim().toLowerCase() : null;
 
     if (userGuess === correctAnswer || userGuess.includes(correctAnswer)) {
       modalMessage.innerHTML = '&lt;img src="../src/assets/correct.gif" alt="Correct guess"&gt; &lt;p&gt;Congratulations! You guessed the movie!&lt;/p&gt;';
@@ -519,7 +520,7 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
         modal.classList.add('no-display');
       }, 3000);
       resetGame();
-    } else {
+    } else if (userGuess === closeAnswer && userGuess.includes(closeAnswer)) {
       triesLeft--;
       triesLeftDisplay.textContent = `Tries left: ${triesLeft}`;
       guessInput.value = '';
@@ -533,9 +534,30 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
         setTimeout(() => {
           modal.classList.add('no-display');
         }, 3000);
-
       } else {
-        modalMessage.innerHTML = '&lt;img src="../src/assets/wrong.gif" alt="Wrong guess"&gt; &lt;p&gt;Wrong guess! Try again.&lt;/p &gt;';
+        modalMessage.innerHTML = '&lt;img src="../src/assets/close.gif" alt="Close guess"&gt; &lt;p&gt;Close! You are on the right track. Try again.&lt;/p&gt;';
+        modal.classList.remove('no-display');
+        setTimeout(() => {
+          modal.classList.add('no-display');
+        }, 3000);
+      }
+    }
+    else {
+      triesLeft--;
+      triesLeftDisplay.textContent = `Tries left: ${triesLeft}`;
+      guessInput.value = '';
+      if (triesLeft === 3 && movieHint) {
+        movieHint.classList.remove('no-display');
+      }
+      if (triesLeft === 0) {
+        modalMessage.innerHTML = `&lt;img src="../src/assets/game-over.gif" alt="Game over"&gt; &lt;p&gt;Game over! The correct answer was: &lt;span class="highlight"&gt;${currentMovie.name}&lt;/span&gt;&lt;/p&gt;`;
+        modal.classList.remove('no-display');
+        resetGame();
+        setTimeout(() => {
+          modal.classList.add('no-display');
+        }, 3000);
+      } else {
+        modalMessage.innerHTML = '&lt;img src="../src/assets/wrong.gif" alt="Wrong guess"&gt; &lt;p&gt;Wrong guess! Try again.&lt;/p&gt;';
         modal.classList.remove('no-display');
         setTimeout(() => {
           modal.classList.add('no-display');
@@ -547,6 +569,8 @@ if (guessInput && submitButton && triesLeftDisplay && modal && modalMessage) {
     </code></pre>
 
     <p>This code adds an event listener to the submit button that checks the user's guess against the correct answer. It
+      also checks if the guess is close to the correct answer (if a close answer is defined) and provides feedback
+      accordingly. The code
       updates the number of tries left, shows hints, and displays modals for correct and incorrect guesses.</p>
 
     <p>Now we will add code to reset the game. Add the following code:</p>
